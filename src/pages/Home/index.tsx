@@ -17,7 +17,7 @@ import {
 const formSchema = z.object({
   task: z.string().min(1, 'Inform a task'),
   minutesAmount: z.number()
-    .min(1, 'The cycle must be min of 5 minutes.')
+    .min(5, 'The cycle must be min of 5 minutes.')
     .max(60, 'The cycle must be max of 60 minutes.'),
 })
 
