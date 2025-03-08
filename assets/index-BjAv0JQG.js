@@ -276,4 +276,4 @@ Please change the parent <Route path="${Y}"> to <Route path="${Y==="/"?"*":`${Y}
     font-weight: 400;
     font-size: 1rem;
   }
-`,L6="/";function q6(){return ae.jsxs(xb,{theme:V6,children:[ae.jsx(Y_,{basename:L6,children:ae.jsx(H6,{children:ae.jsx(T6,{})})}),ae.jsx(B6,{})]})}A2.createRoot(document.getElementById("root")).render(ae.jsx(z.StrictMode,{children:ae.jsx(q6,{})}));
+`,L6="/";console.log("production");function q6(){return ae.jsxs(xb,{theme:V6,children:[ae.jsx(Y_,{basename:L6,children:ae.jsx(H6,{children:ae.jsx(T6,{})})}),ae.jsx(B6,{})]})}A2.createRoot(document.getElementById("root")).render(ae.jsx(z.StrictMode,{children:ae.jsx(q6,{})}));
