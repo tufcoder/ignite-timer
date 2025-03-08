@@ -31,6 +31,7 @@ jobs:
         run: |
           echo "VITE_BASENAME=${{ secrets.VITE_BASENAME }}" >> .env
           echo "VITE_LOCAL_STORAGE=${{ secrets.VITE_LOCAL_STORAGE }}" >> .env
+          echo "local: ${{ secrets.VITE_LOCAL_STORAGE }}"
 
       - name: Build
         run: |
