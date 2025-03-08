@@ -23,12 +23,14 @@ const initialState: CyclesState = {
   activeCycleId: null
 }
 
+const storage = import.meta.env.VITE_LOCAL_STORAGE
+
 export function CyclesContextProvider({ children }: Props) {
   const [cyclesState, dispatch] = useReducer(
     cyclesStateReducer,
     initialState,
     (initialState) => {
-      const cyclesStateJson = localStorage.getItem('@ignite-timer:cycles-state-1.0.0')
+      const cyclesStateJson = localStorage.getItem(storage)
       if (cyclesStateJson) {
         return JSON.parse(cyclesStateJson)
       }
@@ -85,7 +87,7 @@ export function CyclesContextProvider({ children }: Props) {
 
   useEffect(() => {
     const cyclesStateJson = JSON.stringify(cyclesState)
-    localStorage.setItem('@ignite-timer:cycles-state-1.0.0', cyclesStateJson)
+    localStorage.setItem(storage, cyclesStateJson)
   }, [cyclesState])
 
   return (
