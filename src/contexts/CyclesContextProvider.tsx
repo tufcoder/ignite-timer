@@ -23,7 +23,7 @@ const initialState: CyclesState = {
   activeCycleId: null
 }
 
-const storage = import.meta.env.VITE_LOCAL_STORAGE
+const storage = import.meta.env.VITE_LOCAL_STORAGE || 'test'
 
 export function CyclesContextProvider({ children }: Props) {
   const [cyclesState, dispatch] = useReducer(
