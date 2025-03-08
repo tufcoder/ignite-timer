@@ -23,7 +23,7 @@ export function Countdown() {
   const seconds = String(calculateSeconds).padStart(2, '0')
 
   useEffect(() => {
-    let interval: number
+    let interval: NodeJS.Timeout
     if (activeCycle) {
       interval = setInterval(() => {
         const secondsDifference = differenceInSeconds(
